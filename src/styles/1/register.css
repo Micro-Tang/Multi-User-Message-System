@@ -1,0 +1,54 @@
+@charset "UTF-8";
+#register {
+    width: auto;
+    height: 500px;
+    border: 2px solid #ccc;
+    font-size: 12px;
+}
+#register h2 {
+    text-indent:0;
+    text-align: center;
+}
+#register dl {
+    width: 560px;
+    margin: 0 auto;
+}
+#register dl dt {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+#register dl dd {
+    padding:5px 35px;
+}
+#register dl dd.button {
+    padding: 15px 0 0 185px;
+}
+#register dl dd img.face {
+    padding: 0 0 0 55px;
+}
+#register dl dd img.varify {
+    position: relative;
+    top: 7px;
+    left: 5px;
+    cursor: pointer;
+}
+#register dl dd select {
+    width: 85px;
+}
+#register dl dd input.button {
+    width: 60px;
+    height: 25px;
+    border: 1px solid #333;
+    background: #fff;
+    cursor: pointer;
+}
+#register dl dd input.text {
+    width: 220px;
+    height: 19px;
+    border: 1px solid #333;
+    background: #fff;
+}
+#register dl dd input.yzm {
+    width: 90px;
+}

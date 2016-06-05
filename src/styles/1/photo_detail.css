@@ -1,0 +1,23 @@
+@charset "UTF-8";
+#photo_detail {
+    width: auto;
+    height: auto;
+    border: 2px solid #ccc;
+    font-size: 12px;
+}
+#photo_detail h2 {
+    text-indent:0;
+    text-align: center;
+}
+#photo_detail dl.detail {
+    text-align: center;
+    margin: 20px;
+}
+#photo_detail dl.detail dd {
+    padding: 10px;
+    font-size: 14px;
+}
+#photo_detail dl.detail dd.name {
+    font-weight: bold;
+    color: #333;
+}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+#login {
+    width: auto;
+    height: 520px;
+    border: 2px solid #ccc;
+    font-size: 12px;
+}
+#login h2 {
+    text-indent:0;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+#login dl {
+    width: 500px;
+    margin: 130px 170px 0 auto;
+}
+#login dl dt {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+#login dl dd {
+    padding:5px 35px;
+}
+#login dl dd input.text {
+    width: 220px;
+    height: 19px;
+    border: 1px solid #333;
+    background: #fff;
+}
+#login dl dd input.yzm {
+    width: 90px;
+}
+#login dl dd img.varify {
+    position: relative;
+    top: 7px;
+    left: 5px;
+    cursor: pointer;
+}
+#login dl dd.button {
+    padding: 15px 0 0 228px;
+}

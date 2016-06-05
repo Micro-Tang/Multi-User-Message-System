@@ -1,0 +1,48 @@
+@charset "UTF-8";
+body {
+    width: auto;
+}
+#friend h3 {
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+    line-height: 30px;
+    text-align: center;
+    border: 1px dashed #333;
+    background: #eee;
+}
+#friend dl {
+    width: 90%;
+    margin: 0 auto;
+}
+#friend dl dd {
+    margin: 5px 0;
+}
+#friend dl dd input.text {
+    width: 200px;
+    height: 19px;
+    background: #fff;
+    border: 1px solid #333;
+}
+#friend dl dd input.yzm {
+    width: 60px;
+}
+#friend dl dd textarea {
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    border: 1px solid #333;
+}
+#friend dl dd img {
+    cursor: pointer;
+}
+#friend dl dd img.varify {
+    margin-left: 10px;
+    margin-bottom: -6px;
+}
+#friend dl dd input.submit {
+    border: 1px solid #333;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 0 0 25px;
+}

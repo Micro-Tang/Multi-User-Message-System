@@ -1,0 +1,50 @@
+@charset "UTF-8";
+#photo_modify_dir {
+    width: auto;
+    height: 600px;
+    border: 2px solid #ccc;
+    font-size: 12px;
+}
+#photo_modify_dir h2 {
+    text-indent:0;
+    text-align: center;
+}
+#photo_modify_dir p {
+    text-align: center;
+    padding: 20px;
+}
+#photo_modify_dir p a {
+    font-size: 14px;
+    color: #333;
+}
+#photo_modify_dir p a:hover {
+    color: red;
+}
+#photo_modify_dir dl {
+    width: 280px;
+    margin: 20px auto;
+}
+#photo_modify_dir dl dd {
+    padding: 5px 0;
+}
+#photo_modify_dir dl dd input.text {
+    width: 180px;
+    height: 19px;
+    border: 1px dashed #333;
+}
+#photo_modify_dir dl dd textarea {
+    width: 180px;
+    height: 70px;
+    border: 1px dashed #333;
+}
+#photo_modify_dir dl dd#pass {
+    display: none;
+}
+#photo_modify_dir dl dd input.submit {
+    width: 60px;
+    height: 19px;
+    border: 1px dashed #333;
+    cursor: pointer;
+    background: #fff;
+    margin: 0 0 0 175px;
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+#photo {
+    width: auto;
+    height: 600px;
+    border: 2px solid #ccc;
+    font-size: 12px;
+}
+#photo h2 {
+    text-indent:0;
+    text-align: center;
+}
+#photo p {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+#photo p a {
+    font-size: 14px;
+    color: #333;
+}
+#photo p a:hover {
+    color: red;
+}
+#photo dl {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    float: left;
+}
+#photo dl dt {
+    width: 94px;
+    height: 93px;
+    margin: 0 auto;
+    background: url(../../images/dir.png) no-repeat;
+}
+#photo dl dd {
+    width: 90px;
+    height: 25px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+#photo dl dd a {
+    color: #333;
+}
+#photo dl dd a:hover {
+    color: #f60;
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+#photo_show {
+    width: auto;
+    height: auto;
+    border: 2px solid #ccc;
+    font-size: 12px;
+}
+#photo_show h2 {
+    text-indent:0;
+    text-align: center;
+}
+#photo_show p {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+#photo_show p a {
+    font-size: 14px;
+    color: #333;
+}
+#photo_show p a:hover {
+    color: red;
+}
+#photo_show dl {
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    text-align: center;
+}
+#photo_show dl dd {
+    padding: 2px 0;
+}
+#photo_show dl a {
+    font-size: 14px;
+    color: #333;
+}
+#photo_show dl a:hover {
+    color: red;
+}
