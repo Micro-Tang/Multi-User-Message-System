@@ -23,22 +23,22 @@
 各个数据表结构：
 
 tg_user表：
-![tg_user](tg_user.png)
+![tg_user](introduce/tg_user.png)
 
 tg_message表：
-![tg_message](tg_message.png)
+![tg_message](introduce/tg_message.png)
 
 tg_friend表：
-![tg_friend](tg_friend.png)
+![tg_friend](introduce/tg_friend.png)
 
 tg_flower表：
-![tg_flower](tg_flower.png)
+![tg_flower](introduce/tg_flower.png)
 
 tg_article表：
-![tg_article](tg_article.png)
+![tg_article](introduce/tg_article.png)
 
 tg_dir表：
-![tg_article](tg_dir.png)
+![tg_article](introduce/tg_dir.png)
 
 tg_photo表:
-![tg_article](tg_photo.png)
+![tg_article](introduce/tg_photo.png)
