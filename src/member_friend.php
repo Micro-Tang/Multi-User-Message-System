@@ -98,7 +98,7 @@ $result2 = _query("select tg_id, tg_state,tg_touser, tg_fromuser, tg_content, DA
                         ?>
                         <tr>
                             <td><?php echo $friend ?></td>
-                            <td title="<?php echo $rows['tg_content'] ?>"><?php echo _title($rows['tg_content']) ?></td>
+                            <td title="<?php echo $rows['tg_content'] ?>"><?php echo _title($rows['tg_content'], 8) ?></td>
                             <td><?php echo $rows['tg_date'] ?></td>
                             <td><?php echo $state; ?></td>
                             <td><input name="ids[]" value="<?php echo $rows['tg_id'] ?>" type="checkbox" /></td>

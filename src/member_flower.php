@@ -71,7 +71,7 @@ $result2 = _query("select tg_id, tg_fromuser, tg_flower, tg_content, tg_date
             ?>
             <tr>
                 <td><?php echo $rows['tg_fromuser'] ?></td>
-                <td title="<?php echo $rows['tg_content'] ?>"><?php echo _title($rows['tg_content']) ?></td>
+                <td title="<?php echo $rows['tg_content'] ?>"><?php echo _title($rows['tg_content'], 8) ?></td>
                 <td><?php echo $rows['tg_date'] ?></td>
                 <td><?php echo "x".$rows['tg_flower']."朵 "; ?><img src="images/flower.png" /></td>
                 <td><input name="ids[]" value="<?php echo $rows['tg_id'] ?>" type="checkbox" /></td>
