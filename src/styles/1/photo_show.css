@@ -38,3 +38,12 @@
 #photo_show dl a:hover {
     color: red;
 }
+form {
+    width: 500px;
+    height: 100px;
+    margin: 10px auto;
+    text-align: center;
+}
+form input {
+    margin: 30px 0;
+}

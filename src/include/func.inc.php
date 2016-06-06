@@ -277,6 +277,26 @@ function _paging($type, $string) {
 }
 
 /**
+ * _remove_directory {删除非空目录函数}
+ * @param $dirName
+ * @return boolean
+ */
+function _remove_directory($dirName){
+    if (!is_dir($dirName)) {
+        return false;
+    }
+    $handle = @opendir($dirName);
+    while(($file = @readdir($handle)) !== false) {
+        if ($file != '.' && $file != '..') {
+            $dir = $dirName.'/'.$file;
+            is_dir($dir) ? _remove_directory($dir) : @unlink($dir);
+        }
+    }
+    closedir($handle);
+    return rmdir($dirName);
+}  
+
+/**
  * _location 弹出信息并跳转到制定页面
  * @access public
  * @param $info {弹框信息}
@@ -341,7 +361,7 @@ function _setCookies($username, $time) {
  */
 function _unsetCookies() {
     setcookie('username','',time()-1);
-    setcookie('uniqid','',time()-2);
+    setcookie('photo','',time()-1);
     session_destroy();
     header("Location:index.php");
 }
@@ -363,6 +383,9 @@ function _thumb($filename, $percent) {
     $_image_p = imagecreatetruecolor($_new_width, $_new_height);
     //按照已有图片创建画布
     switch($_n[1]) {
+        case 'jpeg':
+            $_image = imagecreatefromjpeg($filename);
+            break;
         case 'jpg':
             $_image = imagecreatefromjpeg($filename);
             break;

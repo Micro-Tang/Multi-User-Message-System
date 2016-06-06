@@ -8,6 +8,28 @@ session_start();
 define('TK', true);
 //引入公共文件
 require_once (dirname(__FILE__).'/include/common.inc.php');
+if (@$_GET['action'] == 'delete' && isset($_GET['id'])) {
+    //获取目录信息
+    $_delete_arr = _query("select tg_dir from tg_dir where tg_id='{$_GET['id']}'")->fetch_assoc();
+    //1.删除该目录里面的图片
+    _query("delete from tg_photo where tg_sid='{$_GET['id']}'");
+    //2.删除目录
+    _query("delete from tg_dir where tg_id='{$_GET['id']}'");
+    //3.删除磁盘目录
+    if (is_dir($_delete_arr['tg_dir'])) {
+        if (_remove_directory($_delete_arr['tg_dir'])) {
+            //1.删除该目录里面的图片
+            _query("delete from tg_photo where tg_sid='{$_GET['id']}'");
+            //2.删除目录
+            _query("delete from tg_dir where tg_id='{$_GET['id']}'");
+            header("Location: photo.php");
+        } else {
+            _alert_back("删除目录失败");
+        }
+    } else {
+        _alert_back("不存在此目录");
+    }
+}
 //调用分页模块函数
 global $offset, $pageSize;
 _page("select tg_id from tg_dir", 20);
@@ -38,7 +60,7 @@ $result2 = _query("select tg_name, tg_type,tg_id from tg_dir order by tg_date de
             <a href="photo_show.php?id=<?php echo $rows['tg_id'] ?>"><dt></dt></a>
             <dd><a href="photo_show.php?id=<?php echo $rows['tg_id'] ?>"><?php echo $rows['tg_name'] ?>&nbsp;<?php echo $type ?></a></dd>
             <?php if (isset($_COOKIE['username']) && isset($_SESSION['admin'])) { ?>
-            <dd>[<a href="photo_modify_dir.php?id=<?php echo $rows['tg_id'] ?>">修改</a>]&emsp;[删除]</dd>
+            <dd>[<a href="photo_modify_dir.php?id=<?php echo $rows['tg_id'] ?>">修改</a>]&emsp;[<a href="photo.php?action=delete&id=<?php echo $rows['tg_id'] ?>">删除</a>]</dd>
             <?php } ?>
         </dl>
         <?php

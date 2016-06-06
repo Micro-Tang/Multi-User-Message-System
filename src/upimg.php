@@ -49,6 +49,7 @@ if (@$_GET['action'] == 'up') {
         if (!@move_uploaded_file($_FILES['userfile']['tmp_name'], $_uploaded_name)) {
             _alert_back("文件移动失败");
         } else {
+            chmod($_uploaded_name,0777);
             echo "<script>
                     window.opener.document.getElementById('url').value='".$_uploaded_name."';
                     window.close();

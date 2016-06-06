@@ -15,7 +15,9 @@ $result2 = _query("select tg_id, tg_title, tg_type, tg_readcount, tg_commentcoun
                           from tg_article 
                           where tg_reid=0
                           order by tg_date 
-                          desc limit {$offset},{$pageSize}")
+                          desc limit {$offset},{$pageSize}");
+//最新图片
+$_lastest_photo = _query("select * from tg_photo where tg_sid not in (select tg_id from tg_dir where tg_type=1) order by tg_date desc limit 1")->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,6 +72,9 @@ require_once (ROOT.'include/header.inc.php');
     </div>
     <div id="pics">
         <h2>最新图片</h2>
+        <dl>
+            <dt><a href="photo_detail.php?id=<?php echo $_lastest_photo['tg_id'] ?>"><img src="thumb.php?filename=<?php echo $_lastest_photo['tg_url'] ?>&percent=0.5" /></a></dt>
+        </dl>
     </div>
 <?php
 require_once (ROOT.'include/footer.inc.php');

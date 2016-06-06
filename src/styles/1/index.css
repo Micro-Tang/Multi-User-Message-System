@@ -1,7 +1,7 @@
 @charset "utf-8";
 #user {
     width: 340px;
-    height: 250px;
+    min-height: 250px;
     float: left;
     border: 2px solid #ccc;
     font-size: 12px;
@@ -55,13 +55,6 @@
 #user dl dd.flower {
     background: url(../../images/flower.png) no-repeat left center;
 }
-#pics {
-    width: 340px;
-    height: 250px;
-    float: left;
-    margin: 10px 0 0 0;
-    border: 2px solid #ccc;
-}
 #list {
     width: 600px;
     height: 514px;
@@ -96,4 +89,25 @@
 }
 #list ul.article li strong {
     font-weight: bolder;
+}
+#pics {
+    width: 340px;
+    height: 250px;
+    float: left;
+    margin: 10px 0 0 0;
+    border: 2px solid #ccc;
+}
+#pics dl {
+    width: 250px;
+    margin: 4px auto;
+    text-align: center;
+}
+#pics dl dd {
+    font-size: 14px;
+}
+#pics dl dd a {
+    color: #333;
+}
+#pics dl dd a:hover {
+    color: #f60;
 }

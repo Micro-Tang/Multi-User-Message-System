@@ -9,15 +9,30 @@
     text-indent:0;
     text-align: center;
 }
-#photo_detail dl.detail {
+#photo_detail dl {
     text-align: center;
     margin: 20px;
 }
-#photo_detail dl.detail dd {
+#photo_detail dl dt a{
+    color: #f60;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+    vertical-align: top;
+}
+#photo_detail dl dd {
     padding: 10px;
     font-size: 14px;
 }
 #photo_detail dl.detail dd.name {
     font-weight: bold;
     color: #333;
+}
+#photo_detail dl dd a {
+    color: #333;
+}
+#photo_detail dl dd a:hover {
+    color: #f60;
+    text-decoration: underline;
 }
